@@ -4,12 +4,12 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Display;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.itjiehun.link.game.Config;
 import com.itjiehun.link.game.GameView;
 import com.itjiehun.link.source.InnerGameReader;
-import com.itjiehun.link.widget.SegmentedRadioGroup;
 
 public class LinkGameActivity extends Activity {
 
@@ -30,7 +30,9 @@ public class LinkGameActivity extends Activity {
 		gameView.setTimeTv((TextView) findViewById(R.id.timeTv));
 		gameView.setLevelTv((TextView) findViewById(R.id.levelTv));
 		
-		gameView.setSegment((SegmentedRadioGroup) findViewById(R.id.segment_text));
+		gameView.setBreakCardsBtn((RadioButton) findViewById(R.id.breakCardsBtn));
+		gameView.setNoteBtn((RadioButton) findViewById(R.id.noteBtn));
+		gameView.setPauseBtn((RadioButton) findViewById(R.id.pauseBtn));
 		
 		gameView.initWithGamePkg(InnerGameReader.readGame(this, jsonConfig));
 		gameView.showStartGameAlert();

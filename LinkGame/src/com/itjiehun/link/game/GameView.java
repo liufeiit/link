@@ -11,23 +11,22 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.FrameLayout;
-import android.widget.RadioGroup;
-import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.itjiehun.link.R;
 import com.itjiehun.link.source.GamePkg;
 import com.itjiehun.link.source.Picture;
-import com.itjiehun.link.widget.SegmentedRadioGroup;
 
-public class GameView extends FrameLayout implements OnCheckedChangeListener {
+public class GameView extends FrameLayout implements OnClickListener {
 
 	public GameView(Context context) {
 		super(context);
 	}
-
+	
 	public GameView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 	}
@@ -380,31 +379,24 @@ public class GameView extends FrameLayout implements OnCheckedChangeListener {
 	private RelativeLayout cardsContainer = null;
 	private TextView timeTv = null;
 	private TextView levelTv = null;
-	
-	private SegmentedRadioGroup segment;
-	
-	public void setSegment(SegmentedRadioGroup segment) {
-		this.segment = segment;
-	}
-	
-	public void onCheckedChanged(RadioGroup group, int checkedId) {
-		if (group == segment) {
-			if (checkedId == R.id.breakCardsBtn) {
-				breakGameCards();
-			} else if (checkedId == R.id.noteBtn) {
-				if (gameCards.size() >= 2) {
-					Card[] notedCards = new Card[2];
-					if (GameUtil.isGameConnected(level, gameCards, gameCardsMap, notedCards)) {
-						notedCards[0].startNoteAnim();
-						notedCards[1].startNoteAnim();
-					}
-				}
-			} else if (checkedId == R.id.pauseBtn) {
-				pauseGame();
-			}
-		}
-	}
 
+	private RadioButton breakCardsBtn, noteBtn, pauseBtn;
+	
+	public void setBreakCardsBtn(RadioButton breakCardsBtn) {
+		this.breakCardsBtn = breakCardsBtn;
+		this.breakCardsBtn.setOnClickListener(this);
+	}
+	
+	public void setNoteBtn(RadioButton noteBtn) {
+		this.noteBtn = noteBtn;
+		this.noteBtn.setOnClickListener(this);
+	}
+	
+	public void setPauseBtn(RadioButton pauseBtn) {
+		this.pauseBtn = pauseBtn;
+		this.pauseBtn.setOnClickListener(this);
+	}
+	
 	/**
 	 * 游戏是否正在运行，计时器是否正在运行
 	 */
@@ -442,4 +434,21 @@ public class GameView extends FrameLayout implements OnCheckedChangeListener {
 			}
 		}
 	};
+
+	@Override
+	public void onClick(View v) {
+		if (v.getId() == R.id.breakCardsBtn) {
+			breakGameCards();
+		} else if (v.getId() == R.id.noteBtn) {
+			if (gameCards.size() >= 2) {
+				Card[] notedCards = new Card[2];
+				if (GameUtil.isGameConnected(level, gameCards, gameCardsMap, notedCards)) {
+					notedCards[0].startNoteAnim();
+					notedCards[1].startNoteAnim();
+				}
+			}
+		} else if (v.getId() == R.id.pauseBtn) {
+			pauseGame();
+		}
+	}
 }
