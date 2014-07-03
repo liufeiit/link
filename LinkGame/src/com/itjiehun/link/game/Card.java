@@ -1,4 +1,4 @@
-package com.plter.linkgame.game;
+package com.itjiehun.link.game;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -12,7 +12,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.plter.linkgame.reader.Picture;
+import com.itjiehun.link.reader.Picture;
 
 public class Card extends FrameLayout {
 

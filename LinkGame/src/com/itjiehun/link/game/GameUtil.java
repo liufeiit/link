@@ -1,4 +1,4 @@
-package com.plter.linkgame.game;
+package com.itjiehun.link.game;
 
 import java.util.ArrayList;
 import java.util.List;

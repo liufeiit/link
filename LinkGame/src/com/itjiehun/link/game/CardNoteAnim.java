@@ -1,4 +1,4 @@
-package com.plter.linkgame.game;
+package com.itjiehun.link.game;
 
 import android.view.animation.Animation;
 import android.view.animation.Transformation;

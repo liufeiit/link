@@ -1,4 +1,4 @@
-package com.plter.linkgame.reader;
+package com.itjiehun.link.reader;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,7 +12,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.widget.Toast;
 
-import com.plter.linkgame.Constants;
+import com.itjiehun.link.Constants;
 
 public class InnerGameReader {
 

@@ -1,4 +1,4 @@
-package com.plter.linkgame;
+package com.itjiehun.link;
 
 public interface Constants {
 	String GAME_TYPE_JSON_CONFIG_EXTRA = "type.json";

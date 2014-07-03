@@ -1,4 +1,4 @@
-package com.plter.linkgame.game;
+package com.itjiehun.link.game;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,8 +16,8 @@ import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.plter.linkgame.reader.GamePkg;
-import com.plter.linkgame.reader.Picture;
+import com.itjiehun.link.reader.GamePkg;
+import com.itjiehun.link.reader.Picture;
 
 public class GameView extends FrameLayout {
 

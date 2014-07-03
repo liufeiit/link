@@ -1,4 +1,4 @@
-package com.plter.linkgame.reader;
+package com.itjiehun.link.reader;
 
 public class GamePkg {
 

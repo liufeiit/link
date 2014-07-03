@@ -1,4 +1,4 @@
-package com.plter.linkgame;
+package com.itjiehun.link;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,9 +7,9 @@ import android.view.Display;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.plter.linkgame.game.Config;
-import com.plter.linkgame.game.GameView;
-import com.plter.linkgame.reader.InnerGameReader;
+import com.itjiehun.link.game.Config;
+import com.itjiehun.link.game.GameView;
+import com.itjiehun.link.reader.InnerGameReader;
 
 public class LinkGameActivity extends Activity {
 
