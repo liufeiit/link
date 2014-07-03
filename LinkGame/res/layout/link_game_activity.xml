@@ -40,24 +40,39 @@
             android:layout_alignParentLeft="true"
             android:gravity="center_horizontal"
             android:orientation="horizontal" >
-
-            <Button
-                android:id="@+id/breakCardsBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="重排" />
-
-            <Button
-                android:id="@+id/noteBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="提示" />
-
-            <Button
-                android:id="@+id/pauseBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="暂停" />
+			
+            <com.itjiehun.link.widget.SegmentedRadioGroup
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="5dip"
+				android:orientation="horizontal"
+				android:id="@+id/segment_text"
+				android:checkedButton="@+id/button_one">
+				<RadioButton android:id="@+id/breakCardsBtn"
+					android:minWidth="40dip"
+					android:minHeight="33dip"
+					android:text="重排"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:button="@null"
+					android:gravity="center"
+					android:textColor="@color/radio_colors" />
+				<RadioButton android:id="@+id/noteBtn"
+					android:minWidth="40dip"
+					android:minHeight="33dip"
+					android:text="提示"
+					android:button="@null"
+					android:gravity="center"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:textColor="@color/radio_colors" />
+				<RadioButton android:id="@+id/pauseBtn"
+					android:minWidth="40dip"
+					android:minHeight="33dip"
+					android:text="暂停"
+					android:button="@null"
+					android:gravity="center"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:textColor="@color/radio_colors" />
+			</com.itjiehun.link.widget.SegmentedRadioGroup>
         </LinearLayout>
     </RelativeLayout>
 

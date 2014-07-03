@@ -12,7 +12,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.itjiehun.link.reader.Picture;
+import com.itjiehun.link.source.Picture;
 
 public class Card extends FrameLayout {
 
